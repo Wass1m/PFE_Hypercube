@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3];
 
-export default function TestPrincipal() {
+export default function TestPrincipal_Etude2() {
   const [formData, setFormData] = useState({
     base: 3,
     dimension: 2,
@@ -130,11 +130,11 @@ export default function TestPrincipal() {
     valueEnd_euler: 0,
     nbrNA: 0,
     nbrEA: 0,
-    colonySize: 5,
+    colonySize: 3,
     alpha: 0.1,
     beta: 0.1,
-    rho: 0.1,
-    iteration: 2,
+    rho: 0.001,
+    iteration: 1,
     initPheromone: 1,
     hgraph: null,
     hgraphA: null,
@@ -219,39 +219,55 @@ export default function TestPrincipal() {
   // ACO ALGO
 
   const execACO = () => {
-    var params = {
-      colonySize: colonySize,
-      alpha: alpha,
-      beta: beta,
-      rho: rho,
-      iteration: iteration,
-      initPheromone: initPheromone,
-    };
+    let alphatemp = 1;
+    let betatemp = 1;
+
+    let rhotemp = 0.1;
 
     var longuerState = 0;
     var eval1State = 0;
 
-    var ant_colony = new AntColony(params, hgraph, hgraphA);
-    console.log(ant_colony);
-    ant_colony.algo();
-    console.log(
-      "longueur de la sol ACO =" + ant_colony._globalBest.getTour().length
-    );
+    while (alphatemp <= 1) {
+      while (betatemp <= 1) {
+        var ant_colony = new AntColony(
+          {
+            colonySize: colonySize,
+            alpha: alphatemp,
+            beta: betatemp,
+            rho: rhotemp,
+            iteration: iteration,
+            initPheromone: initPheromone,
+          },
+          hgraph,
+          hgraphA
+        );
+        console.log(ant_colony);
+        ant_colony.algo();
+        console.log(
+          "longueur de la sol ACO =" + ant_colony._globalBest.getTour().length
+        );
 
-    longuerState = ant_colony._globalBest.getTour().length;
-    console.log("");
-    var heuristique = new EulerHeuristic(hgraph, hgraphA);
-    heuristique.run();
-    console.log("-----------Evaluation - niv 1---------");
-    var niv = 1;
-    var evaluation = new Eval(hgraph, heuristique.getTour(), niv);
-    evaluation.addACOsol(ant_colony._globalBest.getTour());
-    evaluation.calculTableRoutage();
-    evaluation.run(2);
+        longuerState = ant_colony._globalBest.getTour().length;
+        console.log("");
+        var heuristique = new EulerHeuristic(hgraph, hgraphA);
+        heuristique.run();
+        console.log("-----------Evaluation - niv 1---------");
+        var niv = 1;
+        var evaluation = new Eval(hgraph, heuristique.getTour(), niv);
+        evaluation.addACOsol(ant_colony._globalBest.getTour());
+        evaluation.calculTableRoutage();
+        evaluation.run(2);
 
-    console.log(
-      "métrique pour ACO niv 1 est =" + evaluation._metriqueACO + "%"
-    );
+        console.log(
+          "métrique pour ACO niv 1 est =" + evaluation._metriqueACO + "%"
+        );
+
+        betatemp = betatemp + 0.05;
+      }
+      betatemp = 0.1;
+      alphatemp = alphatemp + 0.05;
+    }
+
     eval1State = evaluation._metriqueACO.toFixed(2);
 
     // var seuille = seuil;
@@ -1051,9 +1067,11 @@ export default function TestPrincipal() {
         2 *
         this._graph.getDimension() *
         Math.pow(2, this._graph.getDimension() - 1);
+      console.log("nb arc new" + nbArc);
       var tabEuler;
       console.log("alpha : " + this._alpha);
       console.log("beta : " + this._beta);
+      console.log("rho : " + this._rho);
       for (var t = 0; t < this._maxIterations; t++) {
         //pour chaque génération de fourmis
         console.log("-------------" + "iteration " + t + "-----------");
@@ -1178,6 +1196,7 @@ export default function TestPrincipal() {
           if (edge.getVisite() == 0) {
             Tproba[indice] = new Array();
             Tproba[indice].push(edge.getId());
+
             Tproba[indice].push(1 / k);
 
             cumul =
@@ -1265,11 +1284,13 @@ export default function TestPrincipal() {
       var r;
       var arc;
       var index;
+      var temptem;
       var tour = [];
       //console.log("-------------sens direct------------");
       r = Math.floor(Math.random() * (tabEuler.length - 1));
       //console.log("l'indice choisi est "+r);
       arc = this._graphA.getEdges()[tabEuler[r]];
+      temptem = arc;
       this._graphA.getEdges()[arc.getId()].setVisite(1);
       //remplir les deux colonnes des pères et fils de arc dans T_arc
       T_arc = this._graphA.setPeresFils(tour, arc, T_arc);
@@ -1277,6 +1298,12 @@ export default function TestPrincipal() {
       for (var l = 0; l < this._graphA.getEdges().length / 2 - 1; l++) {
         // calcule de proba pour choisir le prochain saut
         arc = this._graphA.getEdges()[this.calculProba(arc, tabEuler, 1)];
+        if (arc === undefined) {
+          console.log(temptem);
+          console.log(tabEuler);
+          //   console.log(this.calculProba(arc, tabEuler, 1));
+          //   console.log("kra");
+        }
         this._graphA.getEdges()[arc.getId()].setVisite(1);
         T_arc = this._graphA.setPeresFils(tour, arc, T_arc); //rajout à la solution inclu, si pas de cycle
       }

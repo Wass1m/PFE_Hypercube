@@ -492,7 +492,9 @@ var AntColony = (function () {
   AntColony.prototype.algo = function () {
     var T_arc = this._graph.getTarc();
     var nbArc =
-      2 * this._graph.getDimension() * Math.pow(2, this._graph.getDimension());
+      2 *
+      this._graph.getDimension() *
+      Math.pow(2, this._graph.getDimension() - 1);
     var tabEuler;
     for (var t = 0; t < this._maxIterations; t++) {
       //pour chaque génération de fourmis
@@ -755,7 +757,7 @@ var Graph = (function () {
   }
 
   Graph.prototype.createG = function () {
-    for (var i = 0; i < Math.pow(2, this._dimension); i++) {
+    for (var i = 0; i < Math.pow(2, this._dimension - 1); i++) {
       var noeudC = new Noeud(i);
       noeudC._createCoord(this._dimension);
       this._addNoeud(noeudC);
@@ -1625,7 +1627,7 @@ var Edge = (function () {
 const dimension = 3;
 var hgraph = null;
 var hgraphA = null;
-var seuil = 30;
+var seuil = 85;
 
 //
 
@@ -1649,8 +1651,8 @@ const execCreation = () => {
 
 // ant colony init
 
-var colonySize = 2;
-var alpha = 0.25;
+var colonySize = 5;
+var alpha = 0.1;
 var beta = 0.1;
 var rho = 0.1;
 var iteration = 2;
@@ -1960,6 +1962,52 @@ const execEval2 = () => {
 
 execCreation();
 execACO();
-execEuler();
+// execEuler();
 // execEval1();
-execEval2();
+// execEval2();
+
+// var heuristique = new EulerHeuristic(hgraph, hgraphA);
+// heuristique.run();
+// console.log("fin euler");
+
+// var evaluation = new Eval(hgraph, heuristique.getTour(), 1);
+// evaluation.calculTableRoutage();
+
+// evaluation.run(1);
+// console.log("fin eval1");
+// console.log("métrique pour Euler=" + evaluation._metriqueEuler);
+
+// var evaluation = new Eval(hgraph, heuristique.getTour(), 2);
+// evaluation.calculTableRoutage();
+
+// evaluation.run(1);
+// console.log("fin eval2");
+// console.log("métrique pour Euler=" + evaluation._metriqueEuler);
+
+// var evaluation = new Eval(hgraph, heuristique.getTour(), 3);
+// evaluation.calculTableRoutage();
+
+// evaluation.run(1);
+// console.log("fin eval3");
+// console.log("métrique pour Euler=" + evaluation._metriqueEuler);
+
+// var evaluation = new Eval(hgraph, heuristique.getTour(), 4);
+// evaluation.calculTableRoutage();
+
+// evaluation.run(1);
+// console.log("fin eval4");
+// console.log("métrique pour Euler=" + evaluation._metriqueEuler);
+
+// var evaluation = new Eval(hgraph, heuristique.getTour(), 5);
+// evaluation.calculTableRoutage();
+
+// evaluation.run(1);
+// console.log("fin eval5");
+// console.log("métrique pour Euler=" + evaluation._metriqueEuler);
+
+// var evaluation = new Eval(hgraph, heuristique.getTour(), 6);
+// evaluation.calculTableRoutage();
+
+// evaluation.run(1);
+// console.log("fin eval6");
+// console.log("métrique pour Euler=" + evaluation._metriqueEuler);

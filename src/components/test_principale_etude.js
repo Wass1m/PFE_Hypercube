@@ -119,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3];
 
-export default function TestPrincipal() {
+export default function TestPrincipal_Etude() {
   const [formData, setFormData] = useState({
     base: 3,
     dimension: 2,
@@ -219,39 +219,53 @@ export default function TestPrincipal() {
   // ACO ALGO
 
   const execACO = () => {
-    var params = {
-      colonySize: colonySize,
-      alpha: alpha,
-      beta: beta,
-      rho: rho,
-      iteration: iteration,
-      initPheromone: initPheromone,
-    };
+    let betatemp = 0.95;
+    let alphatemp = 0.3;
 
     var longuerState = 0;
     var eval1State = 0;
 
-    var ant_colony = new AntColony(params, hgraph, hgraphA);
-    console.log(ant_colony);
-    ant_colony.algo();
-    console.log(
-      "longueur de la sol ACO =" + ant_colony._globalBest.getTour().length
-    );
+    while (alphatemp < 1) {
+      while (betatemp < 1) {
+        var ant_colony = new AntColony(
+          {
+            colonySize: colonySize,
+            alpha: alphatemp,
+            beta: betatemp,
+            rho: rho,
+            iteration: iteration,
+            initPheromone: initPheromone,
+          },
+          hgraph,
+          hgraphA
+        );
+        console.log(ant_colony);
+        ant_colony.algo();
+        console.log(
+          "longueur de la sol ACO =" + ant_colony._globalBest.getTour().length
+        );
 
-    longuerState = ant_colony._globalBest.getTour().length;
-    console.log("");
-    var heuristique = new EulerHeuristic(hgraph, hgraphA);
-    heuristique.run();
-    console.log("-----------Evaluation - niv 1---------");
-    var niv = 1;
-    var evaluation = new Eval(hgraph, heuristique.getTour(), niv);
-    evaluation.addACOsol(ant_colony._globalBest.getTour());
-    evaluation.calculTableRoutage();
-    evaluation.run(2);
+        longuerState = ant_colony._globalBest.getTour().length;
+        console.log("");
+        var heuristique = new EulerHeuristic(hgraph, hgraphA);
+        heuristique.run();
+        console.log("-----------Evaluation - niv 1---------");
+        var niv = 1;
+        var evaluation = new Eval(hgraph, heuristique.getTour(), niv);
+        evaluation.addACOsol(ant_colony._globalBest.getTour());
+        evaluation.calculTableRoutage();
+        evaluation.run(2);
 
-    console.log(
-      "métrique pour ACO niv 1 est =" + evaluation._metriqueACO + "%"
-    );
+        console.log(
+          "métrique pour ACO niv 1 est =" + evaluation._metriqueACO + "%"
+        );
+
+        betatemp = betatemp + 0.05;
+      }
+      betatemp = 0.1;
+      alphatemp = alphatemp + 0.05;
+    }
+
     eval1State = evaluation._metriqueACO.toFixed(2);
 
     // var seuille = seuil;
@@ -1050,7 +1064,7 @@ export default function TestPrincipal() {
       var nbArc =
         2 *
         this._graph.getDimension() *
-        Math.pow(2, this._graph.getDimension() - 1);
+        Math.pow(2, this._graph.getDimension());
       var tabEuler;
       console.log("alpha : " + this._alpha);
       console.log("beta : " + this._beta);
@@ -1397,7 +1411,7 @@ export default function TestPrincipal() {
 
     Graph.prototype.getTarc = function () {
       var T_arc = [];
-      var nbArc = 2 * this._dimension * Math.pow(2, this._dimension - 1);
+      var nbArc = 2 * this._dimension * Math.pow(2, this._dimension);
       for (var i = 0; i < nbArc; i++) {
         T_arc[i] = new Array();
       }
