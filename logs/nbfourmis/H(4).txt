@@ -1,0 +1,159 @@
+alpha : 0.25
+nbr_fourmis_etude.js:1056 beta : 0.1
+nbr_fourmis_etude.js:1059 -------------iteration 0-----------
+nbr_fourmis_etude.js:1061 nombre d'arc = 96
+nbr_fourmis_etude.js:1062 taille colonie = 50
+nbr_fourmis_etude.js:1067 fourmis id :  0
+nbr_fourmis_etude.js:1271 l'indice choisi est 31
+nbr_fourmis_etude.js:1076  la fourmis 0 a construit une solution de longueur  141
+nbr_fourmis_etude.js:1067 fourmis id :  1
+nbr_fourmis_etude.js:1271 l'indice choisi est 11
+nbr_fourmis_etude.js:1076  la fourmis 1 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  2
+nbr_fourmis_etude.js:1271 l'indice choisi est 48
+nbr_fourmis_etude.js:1076  la fourmis 2 a construit une solution de longueur  149
+nbr_fourmis_etude.js:1067 fourmis id :  3
+nbr_fourmis_etude.js:1271 l'indice choisi est 45
+nbr_fourmis_etude.js:1076  la fourmis 3 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  4
+nbr_fourmis_etude.js:1271 l'indice choisi est 73
+nbr_fourmis_etude.js:1076  la fourmis 4 a construit une solution de longueur  150
+nbr_fourmis_etude.js:1067 fourmis id :  5
+nbr_fourmis_etude.js:1271 l'indice choisi est 71
+nbr_fourmis_etude.js:1076  la fourmis 5 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  6
+nbr_fourmis_etude.js:1271 l'indice choisi est 80
+nbr_fourmis_etude.js:1076  la fourmis 6 a construit une solution de longueur  149
+nbr_fourmis_etude.js:1067 fourmis id :  7
+nbr_fourmis_etude.js:1271 l'indice choisi est 93
+nbr_fourmis_etude.js:1076  la fourmis 7 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  8
+nbr_fourmis_etude.js:1271 l'indice choisi est 29
+nbr_fourmis_etude.js:1076  la fourmis 8 a construit une solution de longueur  142
+nbr_fourmis_etude.js:1067 fourmis id :  9
+nbr_fourmis_etude.js:1271 l'indice choisi est 77
+nbr_fourmis_etude.js:1076  la fourmis 9 a construit une solution de longueur  147
+nbr_fourmis_etude.js:1067 fourmis id :  10
+nbr_fourmis_etude.js:1271 l'indice choisi est 91
+nbr_fourmis_etude.js:1076  la fourmis 10 a construit une solution de longueur  144
+nbr_fourmis_etude.js:1067 fourmis id :  11
+nbr_fourmis_etude.js:1271 l'indice choisi est 35
+nbr_fourmis_etude.js:1076  la fourmis 11 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  12
+nbr_fourmis_etude.js:1271 l'indice choisi est 71
+nbr_fourmis_etude.js:1076  la fourmis 12 a construit une solution de longueur  147
+nbr_fourmis_etude.js:1067 fourmis id :  13
+nbr_fourmis_etude.js:1271 l'indice choisi est 73
+nbr_fourmis_etude.js:1076  la fourmis 13 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  14
+nbr_fourmis_etude.js:1271 l'indice choisi est 69
+nbr_fourmis_etude.js:1076  la fourmis 14 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  15
+nbr_fourmis_etude.js:1271 l'indice choisi est 46
+nbr_fourmis_etude.js:1076  la fourmis 15 a construit une solution de longueur  149
+nbr_fourmis_etude.js:1067 fourmis id :  16
+nbr_fourmis_etude.js:1271 l'indice choisi est 12
+nbr_fourmis_etude.js:1076  la fourmis 16 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  17
+nbr_fourmis_etude.js:1271 l'indice choisi est 53
+nbr_fourmis_etude.js:1076  la fourmis 17 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  18
+nbr_fourmis_etude.js:1271 l'indice choisi est 27
+nbr_fourmis_etude.js:1076  la fourmis 18 a construit une solution de longueur  143
+nbr_fourmis_etude.js:1067 fourmis id :  19
+nbr_fourmis_etude.js:1271 l'indice choisi est 5
+nbr_fourmis_etude.js:1076  la fourmis 19 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  20
+nbr_fourmis_etude.js:1271 l'indice choisi est 90
+nbr_fourmis_etude.js:1076  la fourmis 20 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  21
+nbr_fourmis_etude.js:1271 l'indice choisi est 20
+nbr_fourmis_etude.js:1076  la fourmis 21 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  22
+nbr_fourmis_etude.js:1271 l'indice choisi est 19
+nbr_fourmis_etude.js:1076  la fourmis 22 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  23
+nbr_fourmis_etude.js:1271 l'indice choisi est 31
+nbr_fourmis_etude.js:1076  la fourmis 23 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  24
+nbr_fourmis_etude.js:1271 l'indice choisi est 55
+nbr_fourmis_etude.js:1076  la fourmis 24 a construit une solution de longueur  150
+nbr_fourmis_etude.js:1067 fourmis id :  25
+nbr_fourmis_etude.js:1271 l'indice choisi est 6
+nbr_fourmis_etude.js:1076  la fourmis 25 a construit une solution de longueur  149
+nbr_fourmis_etude.js:1067 fourmis id :  26
+nbr_fourmis_etude.js:1271 l'indice choisi est 30
+nbr_fourmis_etude.js:1076  la fourmis 26 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  27
+nbr_fourmis_etude.js:1271 l'indice choisi est 37
+nbr_fourmis_etude.js:1076  la fourmis 27 a construit une solution de longueur  147
+nbr_fourmis_etude.js:1067 fourmis id :  28
+nbr_fourmis_etude.js:1271 l'indice choisi est 7
+nbr_fourmis_etude.js:1076  la fourmis 28 a construit une solution de longueur  149
+nbr_fourmis_etude.js:1067 fourmis id :  29
+nbr_fourmis_etude.js:1271 l'indice choisi est 55
+nbr_fourmis_etude.js:1076  la fourmis 29 a construit une solution de longueur  150
+nbr_fourmis_etude.js:1067 fourmis id :  30
+nbr_fourmis_etude.js:1271 l'indice choisi est 53
+nbr_fourmis_etude.js:1076  la fourmis 30 a construit une solution de longueur  148
+nbr_fourmis_etude.js:1067 fourmis id :  31
+nbr_fourmis_etude.js:1271 l'indice choisi est 25
+nbr_fourmis_etude.js:1076  la fourmis 31 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  32
+nbr_fourmis_etude.js:1271 l'indice choisi est 6
+nbr_fourmis_etude.js:1076  la fourmis 32 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  33
+nbr_fourmis_etude.js:1271 l'indice choisi est 89
+nbr_fourmis_etude.js:1076  la fourmis 33 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  34
+nbr_fourmis_etude.js:1271 l'indice choisi est 55
+nbr_fourmis_etude.js:1076  la fourmis 34 a construit une solution de longueur  147
+nbr_fourmis_etude.js:1067 fourmis id :  35
+nbr_fourmis_etude.js:1271 l'indice choisi est 30
+nbr_fourmis_etude.js:1076  la fourmis 35 a construit une solution de longueur  142
+nbr_fourmis_etude.js:1067 fourmis id :  36
+nbr_fourmis_etude.js:1271 l'indice choisi est 57
+nbr_fourmis_etude.js:1076  la fourmis 36 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  37
+nbr_fourmis_etude.js:1271 l'indice choisi est 59
+nbr_fourmis_etude.js:1076  la fourmis 37 a construit une solution de longueur  146
+nbr_fourmis_etude.js:1067 fourmis id :  38
+nbr_fourmis_etude.js:1271 l'indice choisi est 73
+nbr_fourmis_etude.js:1076  la fourmis 38 a construit une solution de longueur  149
+nbr_fourmis_etude.js:1067 fourmis id :  39
+nbr_fourmis_etude.js:1271 l'indice choisi est 23
+nbr_fourmis_etude.js:1076  la fourmis 39 a construit une solution de longueur  144
+nbr_fourmis_etude.js:1067 fourmis id :  40
+nbr_fourmis_etude.js:1271 l'indice choisi est 85
+nbr_fourmis_etude.js:1076  la fourmis 40 a construit une solution de longueur  147
+nbr_fourmis_etude.js:1067 fourmis id :  41
+nbr_fourmis_etude.js:1271 l'indice choisi est 52
+nbr_fourmis_etude.js:1076  la fourmis 41 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  42
+nbr_fourmis_etude.js:1271 l'indice choisi est 92
+nbr_fourmis_etude.js:1076  la fourmis 42 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  43
+nbr_fourmis_etude.js:1271 l'indice choisi est 84
+nbr_fourmis_etude.js:1076  la fourmis 43 a construit une solution de longueur  147
+nbr_fourmis_etude.js:1067 fourmis id :  44
+nbr_fourmis_etude.js:1271 l'indice choisi est 18
+nbr_fourmis_etude.js:1076  la fourmis 44 a construit une solution de longueur  144
+nbr_fourmis_etude.js:1067 fourmis id :  45
+nbr_fourmis_etude.js:1271 l'indice choisi est 89
+nbr_fourmis_etude.js:1076  la fourmis 45 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  46
+nbr_fourmis_etude.js:1271 l'indice choisi est 30
+nbr_fourmis_etude.js:1076  la fourmis 46 a construit une solution de longueur  142
+nbr_fourmis_etude.js:1067 fourmis id :  47
+nbr_fourmis_etude.js:1271 l'indice choisi est 16
+nbr_fourmis_etude.js:1076  la fourmis 47 a construit une solution de longueur  144
+nbr_fourmis_etude.js:1067 fourmis id :  48
+nbr_fourmis_etude.js:1271 l'indice choisi est 61
+nbr_fourmis_etude.js:1076  la fourmis 48 a construit une solution de longueur  145
+nbr_fourmis_etude.js:1067 fourmis id :  49
+nbr_fourmis_etude.js:1271 l'indice choisi est 91
+nbr_fourmis_etude.js:1076  la fourmis 49 a construit une solution de longueur  146
+nbr_fourmis_etude.js:237 longueur de la sol ACO =150
+nbr_fourmis_etude.js:242 
+nbr_fourmis_etude.js:245 -----------Evaluation - niv 1---------
+nbr_fourmis_etude.js:252 métrique pour ACO niv 1 est =76.77083333333334%
