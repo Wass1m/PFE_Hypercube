@@ -753,11 +753,11 @@ var Graph = (function () {
   function Graph() {
     this._noeuds = [];
     this._tableVoisin = [];
-    this._dimension = 3;
+    this._dimension = 4;
   }
 
   Graph.prototype.createG = function () {
-    for (var i = 0; i < Math.pow(2, this._dimension - 1); i++) {
+    for (var i = 0; i < Math.pow(2, this._dimension); i++) {
       var noeudC = new Noeud(i);
       noeudC._createCoord(this._dimension);
       this._addNoeud(noeudC);
@@ -1624,7 +1624,6 @@ var Edge = (function () {
 
 // INITIALISATION DES PRAMS
 
-const dimension = 3;
 var hgraph = null;
 var hgraphA = null;
 var seuil = 85;
@@ -1633,10 +1632,6 @@ var seuil = 85;
 
 const execCreation = () => {
   hgraph = new Graph();
-  var params = {
-    dimension: dimension,
-  };
-  hgraph.setParam(params);
   hgraph.createG();
   console.log(hgraph);
 
@@ -1651,11 +1646,11 @@ const execCreation = () => {
 
 // ant colony init
 
-var colonySize = 5;
-var alpha = 0.1;
+var colonySize = 50;
+var alpha = 0.25;
 var beta = 0.1;
 var rho = 0.1;
-var iteration = 2;
+var iteration = 1;
 var initPheromone = 1;
 
 var ant_colonyACO = null;
